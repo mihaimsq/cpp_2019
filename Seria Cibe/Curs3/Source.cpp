@@ -6,6 +6,18 @@ void interschimbareDouaNumere(int valoare1, int valoare2) {
 	valoare2 = temp;
 }
 
+void interschimbareDouaNumere2(int *adresaValoare1, int *adresaValoare2) {
+	int temp = *adresaValoare1;
+	*adresaValoare1 = *adresaValoare2;
+	*adresaValoare2 = temp;
+}
+
+void interschimbareDouaNumere3(int& valoare1, int& valoare2) {
+	int temp = valoare1;
+	valoare1 = valoare2;
+	valoare2 = temp;
+}
+
 //NU EXISTA LA ACEST CURS
 //int variabilaGlobala;
 
@@ -25,7 +37,7 @@ int main() {
 	//printf("\n Adresa din pointer este %d", adresaNumarNorocos);
 	//printf("\n Valoarea din RAM de la adresa aia este %d", *adresaNumarNorocos);
 
-	adresaNumarNorocos = &.;
+	adresaNumarNorocos = &numarNorocos;
 	printf("\n Adresa din pointer este %d", adresaNumarNorocos);
 	printf("\n Valoarea din RAM de la adresa aia este %d", *adresaNumarNorocos);
 
@@ -43,7 +55,9 @@ int main() {
 
 	printf("\n vb1 = %d si vb2 = %d", vb1, vb2);
 
-	interschimbareDouaNumere(vb1, vb2);
+	//interschimbareDouaNumere(vb1, vb2);
+	//interschimbareDouaNumere2(&vb1, &vb2);
+	interschimbareDouaNumere3(vb1, vb2);
 
 	printf("\n vb1 = %d si vb2 = %d", vb1, vb2);
 
