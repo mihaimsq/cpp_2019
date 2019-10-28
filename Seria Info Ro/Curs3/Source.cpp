@@ -13,6 +13,12 @@ void interschimbare2(int *adresaVb1, int *adresaVb2) {
 	*adresaVb2 = temp;
 }
 
+void interschimbare3(int& valoare1, int& valoare2) {
+	int temp = valoare1;
+	valoare1 = valoare2;
+	valoare2 = temp;
+}
+
 int main() {
 
 	int unNumarOarecare;
@@ -56,5 +62,8 @@ int main() {
 
 	printf("\n vb1 = %d si vb2 = %d", vb1, vb2);
 
+	interschimbare3(vb1, vb2);
+
+	printf("\n vb1 = %d si vb2 = %d", vb1, vb2);
 
 }

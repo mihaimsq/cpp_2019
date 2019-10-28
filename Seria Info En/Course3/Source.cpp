@@ -12,6 +12,12 @@ void interchange2(int* addressVb1, int* addressVb2) {
 	*addressVb2 = temp;
 }
 
+void interchange3(int& vb1, int& vb2) {
+	int temp = vb1;
+	vb1 = vb2;
+	vb2 = temp;
+}
+
 int main() {
 
 	int justANumber = 100;
@@ -41,7 +47,8 @@ int main() {
 	printf("\n value1 =  %d, value2 = %d", value1, value2);
 
 	//interchange(value1, value2);
-	interchange2(&value1, &value2);
+	//interchange2(&value1, &value2);
+	interchange3(value1, value2);
 
 	printf("\n value1 =  %d, value2 = %d", value1, value2);
 }
