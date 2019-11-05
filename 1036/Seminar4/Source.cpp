@@ -1,79 +1,122 @@
-#include <string>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-class CurierPostal {
+void afisareVector(int* valori, int n) {
+	cout << endl << "Valorile sunt: ";
+	for (int i = 0; i < n; i++)
+	{
+		cout << valori[i] << ", ";
+	}
+}
 
-	string nume;
-	int varsta;
+void initializareVector(
+	int* vector, int n, int valoare) {
 
-	char nrInmatriculare[11];
-	char *firmaCurierat;
+	for (int i = 0; i < n; i++) {
+		vector[i] = valoare;
+	}
 
-	char* *puncteTraseu;
-	int nrOrase;
+}
 
+//varianta gresita
+//NU RETURNAM ADRESE DE VECTORI STATICI - sunt pe stiva functiei\
+
+//int* creareSiInitializareVector(int * adresaNrElemente) {
+//	int vectorNou[40];
+//	int numarElemente;
+//	int valoareInitiala;
+//
+//	std::cout << std::endl << "Numar produse: ";
+//	std::cin >> numarElemente;
+//	//copiez valoare si in variabila din main
+//	*adresaNrElemente = numarElemente;
+//
+//	std::cout << std::endl << "Valoare initiala: ";
+//	std::cin >> valoareInitiala;
+//
+//	initializareVector(
+//		vectorNou, numarElemente, 0);
+//
+//	return vectorNou;
+//}
+
+int* creareSiInitializareVector(int& adresaNrElemente) {
+	int* vectorNou = NULL;
+	int numarElemente;
+	int valoareInitiala;
+
+	std::cout << std::endl << "Numar produse: ";
+	std::cin >> numarElemente;
+	//copiez valoare si in variabila din main
+	adresaNrElemente = numarElemente;
+	vectorNou = new int[numarElemente];
+
+	std::cout << std::endl << "Valoare initiala: ";
+	std::cin >> valoareInitiala;
+
+	initializareVector(
+		vectorNou, numarElemente, valoareInitiala);
+
+	return vectorNou;
+}
+
+
+
+
+//definire clasa
+class OfertaMagazin {
 public:
+	int* preturiProduse;
+	int nrProduse;
+	string *denumireProduse;
+	
+	char numeMagazin[50];
+	char* adresaMagazin;
+	string denumireOferta;
 
-	//constructor implicit
-	//constructor default
-	//constructor fara parametri
-	CurierPostal() {
-		cout << endl << "Apel constructor default";
-		this->nume = "Necunoscut";
-		this->varsta = 0;
-		strcpy(this->nrInmatriculare, "B-00-AAA");
-		this->firmaCurierat = new char[100];
-		strcpy(this->firmaCurierat, "FanCourier");
-
-		this->nrOrase = 0;
-		this->puncteTraseu = NULL;
-
-	}
-	//constructor cu parametri
-	CurierPostal(string nume, int varsta, 
-		const char* nrInmatriculare, const char* firma) {
-		cout << endl << "Apel constructor cu parametri";
-
-		this->nume = nume;
-		this->varsta = varsta;
-		strcpy(this->nrInmatriculare, nrInmatriculare);
-		this->firmaCurierat = new char[strlen(firma) + 1];
-		strcpy(this->firmaCurierat, firma);
-
-		//NU UITATI DE CELELALTE ATRIBUTE
-		this->nrOrase = 0;
-		this->puncteTraseu = NULL;
-
-	}
-
-	void afisare() {
-		cout << endl << "Date sofer: " <<
-			this->nume << " cu varsta " << this->varsta;
-		cout << endl << "Conduce furgoneta cu numarul "
-			<< this->nrInmatriculare << " de la firma "
-			<< this->firmaCurierat;
-		cout << endl << "Traseu: ";
-		for (int i = 0; i < this->nrOrase; i++) {
-			cout << this->puncteTraseu[i] << ", ";
-		}
-	}
 };
 
 int main() {
 
-	//instantiere clasa =  creare obiect
-	CurierPostal curier1;
-	CurierPostal curier2(
-		"Gigel", 23, "B-01-FAN", "Fan Courier");
+	//citim elementele unui vector de la consola
+	int preturiProduse[40];
+	int numarProduse;
+
+	//varianta fara functie
+
+	//std::cout << std::endl << "Numar produse: ";
+	//std::cin >> numarProduse;
+
+	//initializareVector(
+	//	preturiProduse, numarProduse, 0);
+
+	//varianta cu functie
+	//preturiProduse = creareSiInitializareVector();
+
+	int nrElementeVectorNou;
+	//pentru varianta cu *
+	//int * preturi = creareSiInitializareVector(
+	//	&nrElementeVectorNou);
+
+	int * preturi = creareSiInitializareVector(
+		nrElementeVectorNou);
 
 
+	afisareVector(preturi, nrElementeVectorNou);
 
-	curier1.afisare();
-	curier2.afisare();
+	//test clasa
+	OfertaMagazin ofertaEmag;
+	strcpy(ofertaEmag.numeMagazin, "emag");
 
-	//CurierPostal *adresaObiectCurier;
-	//CurierPostal *curieri;
+	std::cout << endl << "Adresa magazin: ";
+	char buffer[1000];
+	cin >> buffer;
+	ofertaEmag.adresaMagazin = new char[strlen(buffer) + 1];
+	strcpy(ofertaEmag.adresaMagazin, buffer);
+
+	std::cout << endl << "Denumire oferta: ";
+	cin >> ofertaEmag.denumireOferta;
 
 }
