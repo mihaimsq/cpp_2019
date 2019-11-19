@@ -1,0 +1,11 @@
+
+ ---------------------- 
+Nume produs: Laptop
+Pret produs: 1200
+Stoc produs: 100
+Istoric vanzari: 
+ ---------------------- 
+Nume produs: Biscuiti
+Pret produs: 2.5
+Stoc produs: 100
+Istoric vanzari: 
