@@ -1,0 +1,11 @@
+
+---------------------------
+Product name: Laptop
+Product price: 1200
+Product quantity: 100
+No data
+---------------------------
+Product name: Phone
+Product price: 990
+Product quantity: 100
+No data

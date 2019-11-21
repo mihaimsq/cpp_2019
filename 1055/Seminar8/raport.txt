@@ -1,0 +1,9 @@
+
+-----------------------
+Denumire produs:  
+Pret produs: 1200
+Cantitate produs: 100
+-----------------------
+Denumire produs: Biscuiti
+Pret produs: 2.3
+Cantitate produs: 100
