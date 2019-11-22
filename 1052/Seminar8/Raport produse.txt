@@ -1,0 +1,23 @@
+
+--------------------------
+Denumire produs: Laptop
+Pret produs: 1200
+Cantitate produs: 100
+Producator produs: Lenovo
+--------------------------
+Denumire produs: Test
+Pret produs: 23
+Cantitate produs: 60
+Producator produs: Lenovo
+Istoric vanzari: 10 | 14 | 5 | 
+--------------------------
+Denumire produs: Laptop
+Pret produs: 1200
+Cantitate produs: 100
+Producator produs: Lenovo
+--------------------------
+Denumire produs: test3
+Pret produs: 100
+Cantitate produs: 1000
+Producator produs: ibm
+Istoric vanzari: 90 | 80 | 

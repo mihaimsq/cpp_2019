@@ -1,0 +1,2 @@
+The student name is John Doe and his age is 22. The grades are 10,9,0.
+The student name is Alice and her age is 22. She doesn't have grades.
