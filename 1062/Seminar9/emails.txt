@@ -1,0 +1,22 @@
+3
+1
+Exams subjects
+me@email.com
+2
+john@email.com
+alice@email.com
+1
+0
+Hello, I have the subjects. Call me.
+2
+Invite Alice
+me@email.com
+0
+
+3
+Course question
+me@email.com
+1
+vader@email.com
+0
+When the assignment will be published ?
