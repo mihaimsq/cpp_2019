@@ -1,0 +1,22 @@
+
+ --------------------------- 
+Nume: Gigel
+Varsta: 0
+Gen: N
+Nr matricol: 1
+Note examene obligatorii: 
+Note examene facultative: 
+ --------------------------- 
+Nume: Ionel
+Varsta: 0
+Gen: N
+Nr matricol: 2
+Note examene obligatorii: 
+Note examene facultative: 9 | 9 | 8 | 
+ --------------------------- 
+Nume: George
+Varsta: 21
+Gen: N
+Nr matricol: 1001
+Note examene obligatorii: 
+Note examene facultative: 

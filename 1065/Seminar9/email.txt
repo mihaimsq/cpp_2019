@@ -1,0 +1,17 @@
+2
+1
+Exam subjects
+me@email.com
+2
+alice@email.com
+1
+bob@email.com
+0
+2
+Hello !
+I have the exam subjects. Call me.
+2
+Invitation draft
+me@email.com
+0
+0
