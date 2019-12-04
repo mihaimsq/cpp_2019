@@ -1,0 +1,16 @@
+
+
+-------------------------------
+0 cu numele Popescu Ion
+Note examene obligatorii:9 | 8 | 
+Note examene facultative:10 | 10 | 9 | 0 | 0 | 
+
+-------------------------------
+0 cu numele Gigel
+Note examene obligatorii:
+Note examene facultative:0 | 0 | 0 | 0 | 0 | 
+
+-------------------------------
+0 cu numele Ana
+Note examene obligatorii:10 | 10 | 
+Note examene facultative:6 | 0 | 0 | 0 | 0 | 
