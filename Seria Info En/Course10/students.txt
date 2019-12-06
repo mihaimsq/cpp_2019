@@ -1,0 +1,37 @@
+3
+1
+John Doe
+Bucharest, Piata Romana
+Sava
+22
+M
+3
+9
+9
+10
+2
+10
+8
+2
+Alice
+Iasi
+Mihai Viteazu
+22
+F
+1
+10
+2
+9
+9
+3
+Bob
+Craiova
+Fratii Buzesti
+22
+M
+3
+9
+9
+10
+1
+10
