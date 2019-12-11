@@ -1,0 +1,14 @@
+Fiind data clasa Email, definită în seminarul 9 (https://github.com/catalinboja/cpp_2019) sa se implementeze o soluție C++ (pentru clasa se implementează obligatoriu Constructori, Constructor de copiere, Destructor si operatorul =) care sa permită
+
+crearea unui vector dinamic de Email-uri cu date predefinite (cu sau fără constructorul default)
+generarea unui raport cu datele email-urilor conform cerințelor din fișierul atașat (prin metoda statica in clasa)
+crearea unui vector de email-uri pe baza unui fișier text de intrare cu structura data la seminar (metoda statica in clasa)
+salvarea si încărcare datelor email-urilor într-un fișier binar cu structura data (metoda statica in clasa)
+la pornirea aplicației, numele fișierului text de intrare este primit prin argumentele funcției main(); dacă fișierul text nu este primit atunci aplicația afișează un mesaj corespunzător
+vectorul dinamic de email-uri (de obiecte sau de pointeri) se poate gestiona prin intermediul unei noi clase (de ex ListaEmail) care să îl gestioneze
+formatul pentru raportul text și structura fișierului binar sunt descrise in fișierul Readme.txt atașat. Pentru fișierul text de intrare se folosește structura definită la seminar.
+
+
+Soluția se dezvoltă într-un singur fișier sursă .cpp. Timpul necesar pentru rezolvarea subiectului este de 5-7 ore. Nu sunt permise răspunsuri după termenul limită.
+
+Toate metodele se vor testa in main().
