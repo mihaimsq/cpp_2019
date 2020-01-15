@@ -29,23 +29,27 @@ public:
 			return "urgent";
 	}
 
-	Colet(TipPrioritate p, bool esteAlimentar, const T c) {
-		cout << endl << "Varianta generica constructor template";
-		this->prioritate = p;
-		this->areContinutAlimentar = esteAlimentar;
-		//nu merge daca T este char*
-		this->continut = c;
+	Colet(TipPrioritate p, bool esteAlimentar, T c) {
+		{
+			cout << endl << "Varianta generica constructor template";
+			this->prioritate = p;
+			this->areContinutAlimentar = esteAlimentar;
+			//nu merge daca T este char*
+			this->continut = c;
+		}
 	}
+
+
 };
 
 //specializare pentru constructor atunci cand T este char*
-//Colet<char*>::Colet(TipPrioritate p, bool esteAlimentar, const char* c) {
-//	cout << endl << "Varianta specializata constructor template pentru char*";
-//	this->prioritate = p;
-//	this->areContinutAlimentar = esteAlimentar;
-//	this->continut = new char[strlen(c)+1];
-//	strcpy(this->continut, c);
-//}
+template<> Colet<char*>::Colet(TipPrioritate p, bool esteAlimentar, char* c) {
+	cout << endl << "Varianta specializata constructor template pentru char*";
+	this->prioritate = p;
+	this->areContinutAlimentar = esteAlimentar;
+	this->continut = new char[strlen(c)+1];
+	strcpy(this->continut, c);
+}
 
 
 int suma(int a, int b) {
@@ -83,7 +87,7 @@ int main() {
 	Frigider f1;
 	Colet<Frigider> coletFrigider(TipPrioritate::NORMAL, false, f1);
 
-	//Colet<char*> coletSirDinamic(TipPrioritate::PRIORITAR, false, "O carte");
+	Colet<char*> coletSirDinamic(TipPrioritate::PRIORITAR, false, (char*)"O carte");
 
 	//c1.prioritate = "normal";
 
