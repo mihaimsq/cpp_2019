@@ -34,11 +34,20 @@ public:
 	}
 };
 
+//specializare totala a unei metode
 template<> Student<int,char*>::Student(
 	int Varsta, char* CuloareOchi,
 	int* Note, int nrNote) {
-
 }
+
+//specializare partiala a clasei
+template<typename T> class Student<T, char*> {
+public:
+	Student(
+		int Varsta, char* CuloareOchi,
+		T* Note, int nrNote) {
+	}
+};
 
 int main() {
 	cout << endl << "Suma dintre 2 si 3 este " <<

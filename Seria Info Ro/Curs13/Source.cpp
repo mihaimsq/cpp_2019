@@ -33,8 +33,15 @@ public:
 		cout << endl << "constr parametri C";
 	}
 
-	C(const C & copie):B(copie),A(copie) {
+	C(const C & copie):B(copie) {
 		cout << endl << "constr copiere C";
+
+	}
+};
+
+class D : public A, B {
+public:
+	D() :A(), B() {
 
 	}
 };
